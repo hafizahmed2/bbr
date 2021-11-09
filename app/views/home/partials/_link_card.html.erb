@@ -1,0 +1,16 @@
+<% link_path ||= '/' %>
+<% image ||= {src: '', alt: 'image'} %>
+<% text ||= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' %>
+
+<div class="image-card">
+  <%= link_to link_path do %>
+    <div class="image-placeholder">
+      <%= image_tag image[:src], alt: image[:alt] %>
+    </div>
+
+    <div class="image-card-content">
+      <p class="heading heading-3 txt-white"><%= heading %></p>
+      <p class="txt-white"><%= text %></p>
+    </div>
+  <% end %>
+</div>

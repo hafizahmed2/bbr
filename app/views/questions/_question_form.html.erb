@@ -1,0 +1,21 @@
+<% if @question.errors.any? %>
+  <%= @question.errors.full_messages.join(', ') %>
+<% end %>
+
+<%= form_with model: @question, builder: CustomFormBuilder, remote: true, local: false do |form| %>
+  <h2 class="heading heading-2">questions</h2>
+
+  <div class="exp-form d-flex justify-content-between">
+    <%= form.bbr_text_field :user_name, :name, class: 'text-field control-dark-border', placeholder: 'Enter your full name' %>
+
+    <%= form.bbr_email_field :user_email, :email, class: 'text-field control-dark-border', placeholder: 'Enter your email address' %>
+
+    <%= form.bbr_text_area :question, :questions, class: 'textarea control-dark-border width-full', placeholder: 'Enter your questions', rows: '7' %>
+
+    <%= form.bbr_submit 'Submit Questions', id: 'm-card-btn', class: 'btn btn-primary margin-auto', data: {disable_with: :processing} %>
+  </div>
+
+  <br/>
+
+  <%= link_to 'Set time to discuss instead', '/', class: 'd-flex bbr-link justify-content-center txt-dark' %>
+<% end %>

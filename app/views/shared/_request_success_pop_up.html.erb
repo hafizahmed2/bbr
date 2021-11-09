@@ -1,0 +1,36 @@
+<div class="is-modal" id="bbr-modal">
+  <div class="modal-block">
+    <div class="modal-body modal-body-light">
+      <div class="modal-close-icon">
+        <span class="modal-close-icon">&times;</span>
+      </div>
+
+      <p class="heading heading-3 txt-center">
+        thank you for your request
+      </p>
+
+      <p class="txt-center">A member of our team will be in touch with you shortly.</p>
+
+      <div class="txt-center">
+        <%= image_tag 'success_modal_image.png', class: 'width-full', alt: 'success modal image' %>
+      </div>
+
+      <br />
+
+      <div class="modal-footer d-flex justify-content-center">
+        <a href="#" class="btn btn-primary">Back to BBR Support</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+var modal = document.getElementById("bbr-modal");
+var span = document.getElementsByClassName("modal-close-icon")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+

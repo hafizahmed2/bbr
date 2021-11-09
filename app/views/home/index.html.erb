@@ -1,0 +1,50 @@
+<section>
+  <div class="hero-image">
+    <div class="container">
+      <h1 class="heading heading-1 txt-primary">
+        BBR SUPPORT
+      </h1>
+      <div class="col-47">
+        <p class="paragraph txt-white">Welcome to BBR Support Portal! </p>
+        <p class="paragraph txt-white">
+          Diversity and Inclusion in Hair and Makeup is important. We are here to make the process easier. Click on each desired service to learn more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <%= render 'home/partials/link_card',
+        link_path: '/',
+        image: {src: 'image-card-1.jpg', alt: 'share an experience'},
+        heading: 'share an experience'
+      %>
+
+      <%= render 'home/partials/link_card',
+        link_path: '/',
+        image: {src: 'image-card-2.jpg', alt: 'support for a project'},
+        heading: 'support for a project'
+      %>
+
+      <%= render 'home/partials/link_card',
+          link_path: '/',
+          image: {src: 'image-card-3.jpg', alt: 'Red carpet / press booking'},
+          heading: 'red carpet / press booking'
+      %>
+
+      <%= render 'home/partials/link_card',
+          link_path: '/',
+          image: {src: 'image-card-4.jpg', alt: 'Tips & faq'},
+          heading: 'tips & faq'
+      %>
+
+      <%= render 'home/partials/link_card',
+          link_path: new_question_path,
+          image: {src: 'image-card-5.jpg', alt: 'image-card-5.jpg'},
+          heading: 'Questions'
+      %>
+    </div>
+  </div>
+</section>

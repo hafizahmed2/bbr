@@ -1,0 +1,535 @@
+*{
+  padding: 0;
+  margin: 0
+}
+
+body {
+  font-family: CenturyGothicRegular;
+  font-size: 16px;
+  background-color: #F7F0E4;
+}
+
+.navigation {
+  background-color: #361312;
+  height: 80px;
+  width: 100%;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1620px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.btn {
+  padding: 13px 25px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+}
+
+.btn-primary {
+  background: #FFA37C;
+  font-family: CenturyGothicRegular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #361312;
+}
+
+.hero-image {
+  background-image: image-url('hero-image-1.jpg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-color: #0B0205;
+  padding: 122px 0 192px 0;
+  margin-bottom: 65px;
+  box-sizing: border-box;
+  max-height: 503px;
+}
+
+.heading {
+  font-family: SackersGothicStd, cursive;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.heading-1 {
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: -0.05em;
+}
+
+.heading-2 {
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.heading-3 {
+font-size: 17px;
+line-height: 24px;
+letter-spacing: -0.05em;
+text-transform: uppercase;
+margin-bottom: 6px;
+font-weight: 900;
+font-style: normal;
+}
+
+.paragraph {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+  color: #F7F0E4;
+}
+
+.col-47 {
+  max-width: 47.3%;
+  width: 100%;
+}
+
+.txt-primary {
+  color: #FFA37C;
+}
+
+.txt-white {
+  color: #F7F0E4;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-dark {
+  color: #361312;
+}
+
+.image-card {
+  max-width: 369px;
+  width: 100%;
+  background: #361312;
+  border-radius: 10px;
+  margin: 0 12px 41px 12px;
+}
+
+.image-card a {
+  text-decoration: none;
+}
+
+.image-card .image-placeholder {
+  max-width: 369px;
+  width: 100%;
+}
+
+.image-card .image-placeholder img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.image-card .image-card-content {
+  padding: 13px 21px 30px 21px;
+}
+
+.footer {
+  background-color: #FFA37C;
+  padding: 60px 0;
+}
+
+.footer-left-block {
+  max-width: 40%;
+  width: 100%;
+}
+
+.footer-left-block .footer-logo {
+  margin-right: 31px;
+}
+
+.footer-middle-block {
+  max-width: 30%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.footer-links {
+  color: #361312;
+  text-decoration: underline;
+}
+
+.footer-right-block {
+  max-width: 30%;
+  width: 100%;
+}
+
+.footer-icons {
+  justify-content: flex-end;
+}
+
+.footer-social-icons {
+  margin-left: 26px
+}
+
+/* Share Experience PAGE */
+
+#share-exp-page {
+  margin-bottom: 80px;
+}
+
+.btn-back {
+  margin: 31px 13px 45px 0;
+}
+
+.back-icon {
+    text-decoration: none;
+    color: inherit;
+  img {
+  padding-right: 13px;
+  }
+}
+
+.bbr-link {
+  text-decoration: underline;
+  color: #361312;
+}
+
+#share-exp-page .share-image-box-left {
+  max-width: 49.07%;
+  width: 100%;
+  max-height: 594px;
+  object-fit: cover;
+}
+
+#share-exp-page .share-image-box-left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+  object-fit: cover;
+}
+
+#share-exp-page .share-red-box-right {
+  max-width: 49.77%;
+  width: 100%;
+  max-height: 594px;
+  background-color: #361312;
+  border-radius: 0 15px 15px 0;
+  color: #F7F0E4;
+  padding: 44px 40px;
+  box-sizing: border-box;
+}
+
+#share-exp-page.share-red-box-right .heading-2 {
+  margin-bottom: 30px;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Support Page */
+
+#support-page {
+  margin-bottom: 80px;
+}
+
+.btn-back {
+  margin: 31px 13px 45px 0;
+}
+.back-icon {
+  margin-right: 13px;
+}
+
+.support-image-box-left {
+  max-width: 46.5%;
+  width: 100%;
+}
+
+.support-image-box-left img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.support-box-right {
+  max-width: 49.77%;
+  width: 100%;
+  border-radius: 0 15px 15px 0;
+  color: #361312;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.support-box-right .heading-2 {
+  margin-bottom: 30px;
+  color: #361312;
+}
+
+.select {
+  width: 100%;
+  height: 54px;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 17px 34px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.select:focus {
+  outline: 0;
+}
+
+.field-control {
+  margin-bottom: 19px;
+}
+
+.card-control-width {
+  width: 48.45%;
+}
+
+.text-field {
+  padding: 17px 34px;
+  width: 250.5px;
+  height: 54px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: transparent;
+  width: 100%;
+  max-width: 100%;
+}
+
+.text-field:focus {
+  outline: 0;
+}
+
+.textarea {
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 17px 34px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.textarea:focus {
+  outline: 0;
+}
+
+.input-label {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  font-family: CenturyGothicRegular;
+}
+
+.control-light-border {
+  border: 1px solid #F7F0E4;
+  color: #F7F0E4;
+}
+
+.control-light-border::placeholder {
+  color: #F7F0E4;
+}
+
+.control-dark-border {
+  border: 1px solid #4F4F4F;
+  color: #4F4F4F;
+}
+
+.control-dark-border::placeholder {
+  color: #4F4F4F;
+}
+
+.sub-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 7px;
+}
+
+.mobile-toogle {
+  display: none;
+}
+
+#m-nav-contact {
+  display: block;
+}
+
+@media screen and (max-width: 1920px) {
+  .container {
+    max-width: 84.28%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mobile-toogle {
+    display: block;
+  }
+
+  #m-nav-contact {
+    display: none;
+  }
+
+  .navigation {
+    padding-top: 26px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+    }
+
+  .col-47 {
+    max-width: 100%  }
+
+    .hero-image {
+      text-align: center;
+      background-size: cover;
+      background-image: image-url('hero-image-mobile.jpg');
+    }
+
+    #share-exp-page .share-image-box-left {
+      max-width: 100%;
+    }
+
+    .share-red-box-right .heading-2 {
+      margin-bottom: 23px;
+      font-size: 20px;
+    }
+
+    .support-box-right .heading-2 {
+      font-size: 20px;
+      margin-bottom: 23px;
+    }
+
+    #share-exp-page .share-image-box-left img {
+      border-radius: 0;
+    }
+
+    #share-exp-page .share-red-box-right {
+      max-width: 100%;
+      border-radius: 0;
+    }
+
+    /* Support page */
+
+    .support-image-box-left {
+      margin-bottom: 23px;
+      padding: 0 7px;
+    }
+
+    .support-image-box-left img {
+      border-radius: 0;
+    }
+
+    .support-image-box-left, .support-box-right {
+      max-width: 100%;
+      padding: 0 7px;
+    }
+
+      /* For Footer */
+
+  .footer-right-block {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .footer-social-icons:first-child {
+    margin-left: -26px;
+  }
+
+  .footer-icons {
+    justify-content: center;
+    margin-bottom: 52px;
+  }
+
+  .footer-left-block {
+    max-width: 100%;
+    order: 2;
+    justify-content: center;
+  }
+
+  .footer-left-block .footer-logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  .footer-left-block .footer-copy-right {
+    margin-bottom: 52px;
+  }
+
+  .footer-middle-block {
+    max-width: 100%;
+    order: 3;
+  }
+
+  .footer-links {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 52px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .card-control-width {
+    width: 100%;
+  }
+
+  #m-card-btn {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+
+  .image-card {
+    margin: 0 0 41px 0;
+  }
+
+  .heading-1 {
+    font-size: 45px;
+  }
+}
