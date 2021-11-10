@@ -1,0 +1,22 @@
+<%= render 'shared/back_link_section'%>
+
+<section>
+  <div class="container">
+    <div class="d-flex justify-content-center" id="share-exp-page">
+      <div class="share-image-box-left">
+        <%= image_tag 'exp-side-img.jpg', alt: 'experience page image' %>
+      </div>
+      <div class="share-red-box-right">
+        <h2 class="heading heading-2 txt-primary txt-center">share an experience</h2>
+          <br/>
+        <div id="experience_form_area">
+          <%= render 'experiences/experience_form' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="success_popup_area">
+  <%= render "shared/request_success_pop_up" %>
+</div>

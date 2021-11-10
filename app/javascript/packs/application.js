@@ -10,6 +10,12 @@ import "channels"
 
 require("jquery")
 
+import flatpickr from "flatpickr"
+import "flatpickr/dist/flatpickr.min.css"
+
+import "bbr/modals"
+import "bbr/datepickers_conf"
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

@@ -1,5 +1,5 @@
 $('#question_form_area').html('<%= j render "questions/question_form" %>');
 
 <% if @success %>
-  $('#success_popup_area').html('<%= j render "shared/request_success_pop_up" %>');
+  $('#success_popup_area .is-modal').show();
 <% end %>

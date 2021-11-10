@@ -1,13 +1,4 @@
-<section>
-  <div class="container">
-    <div class="btn-back">
-      <%= link_to root_url, class: "back-icon d-flex align-item-center" do %>
-        <%= image_tag 'icon-back.svg', alt: 'back icon' %>
-        Back
-      <% end %>
-    </div>
-  </div>
-</section>
+<%= render 'shared/back_link_section'%>
 
 <section>
   <div class="container">
@@ -23,4 +14,6 @@
   </div>
 </section>
 
-<div id="success_popup_area"></div>
+<div id="success_popup_area">
+  <%= render "shared/request_success_pop_up" %>
+</div>
