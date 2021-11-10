@@ -1,0 +1,5 @@
+$('#support_form_area').html('<%= j render "project_supports/project_support_form" %>');
+
+<% if @success %>
+  $('#success_popup_area .is-modal').show();
+<% end %>

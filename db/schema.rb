@@ -25,13 +25,13 @@ ActiveRecord::Schema.define(version: 2021_11_10_131148) do
   end
 
   create_table "project_supports", force: :cascade do |t|
-    t.string "user_name"
-    t.string "user_email"
-    t.date "start_date"
-    t.string "location"
-    t.integer "groomer"
-    t.integer "union_requirement"
-    t.text "project_details"
+    t.string "user_name", null: false
+    t.string "user_email", null: false
+    t.date "start_date", null: false
+    t.string "location", null: false
+    t.string "groomer", null: false, array: true
+    t.integer "union_requirement", null: false
+    t.text "project_details", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

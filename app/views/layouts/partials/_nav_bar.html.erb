@@ -2,10 +2,15 @@
   <div class="container">
     <div class="d-flex justify-content-between align-content-center align-item-center">
       <div class="nav-logo">
-        <%= image_tag 'BBR-nav-logo.svg', alt: 'BBR-Logo' %>
+        <%= link_to root_url do %>
+          <%= image_tag 'BBR-nav-logo.svg', alt: 'BBR-Logo' %>
+        <% end %>
       </div>
 
-      <a href="" class="btn btn-primary">Contact Us</a>
+      <a href="/" class="mobile-toogle">
+        <%= image_tag 'toggle.svg', alt: 'toggle-menu' %>
+      </a>
+      <a href="/" class="btn btn-primary" id="m-nav-contact">Contact Us</a>
     </div>
   </div>
 </nav>

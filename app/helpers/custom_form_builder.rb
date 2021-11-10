@@ -36,6 +36,8 @@ class CustomFormBuilder < ActionView::Helpers::FormBuilder
   end
 
   def disply_error_message(method, label_text)
-    @object.errors[method].first.prepend(label_text.to_s + ' ').capitalize if @object.errors[method].count > 0
+    if @object.errors[method].count > 0
+      content_tag(:div, @object.errors[method].first.prepend(label_text.to_s + ' ').capitalize, class: 'validation-error-msg')
+    end
   end
 end

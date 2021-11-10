@@ -95,6 +95,7 @@ body {
   line-height: 36px;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .heading-3 {
@@ -395,6 +396,17 @@ font-style: normal;
   display: block;
 }
 
+.validation-error-msg {
+  font-size: 12px;
+  margin-left: 8px;
+  color: #FFA37C;
+  margin-top: 4px;
+}
+
+.textarea {
+  max-height: 110px;
+}
+
 @media screen and (max-width: 1920px) {
   .container {
     max-width: 84.28%;
@@ -449,6 +461,7 @@ font-style: normal;
     #share-exp-page .share-red-box-right {
       max-width: 100%;
       border-radius: 0;
+      max-height: inherit;
     }
 
     /* Support page */
@@ -475,7 +488,7 @@ font-style: normal;
   }
 
   .footer-social-icons:first-child {
-    margin-left: -26px;
+    margin-left: 0px;
   }
 
   .footer-icons {
@@ -487,16 +500,17 @@ font-style: normal;
     max-width: 100%;
     order: 2;
     justify-content: center;
-  }
 
-  .footer-left-block .footer-logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 52px;
-  }
+    .footer-logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 52px;
+      margin-right: 0;
+    }
 
-  .footer-left-block .footer-copy-right {
-    margin-bottom: 52px;
+    .footer-copy-right {
+      margin-bottom: 52px;
+    }
   }
 
   .footer-middle-block {
@@ -508,6 +522,15 @@ font-style: normal;
     width: 100%;
     text-align: center;
     margin-bottom: 52px;
+  }
+
+  .image-card {
+    margin: 0 12px 15px 12px;
+  }
+
+  .hero-image .heading-1 {
+    font-size: 28px;
+    line-height: 33.6px;
   }
 }
 
