@@ -29,21 +29,21 @@
       %>
 
       <%= render 'home/partials/link_card',
-          link_path: '/',
+          link_path: new_booking_path,
           image: {src: 'image-card-3.jpg', alt: 'Red carpet / press booking'},
           heading: 'red carpet / press booking'
-      %>
-
-      <%= render 'home/partials/link_card',
-          link_path: '/',
-          image: {src: 'image-card-4.jpg', alt: 'Tips & faq'},
-          heading: 'tips & faq'
       %>
 
       <%= render 'home/partials/link_card',
           link_path: new_question_path,
           image: {src: 'image-card-5.jpg', alt: 'image-card-5.jpg'},
           heading: 'Questions'
+      %>
+
+      <%= render 'home/partials/link_card',
+        link_path: '/',
+        image: {src: 'image-card-4.jpg', alt: 'Tips & faq'},
+        heading: 'tips & faq'
       %>
     </div>
   </div>

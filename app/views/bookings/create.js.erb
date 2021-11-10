@@ -1,0 +1,5 @@
+$('#booking_form_area').html('<%= j render "bookings/booking_form" %>');
+
+<% if @success %>
+  $('#success_popup_area .is-modal').show();
+<% end %>

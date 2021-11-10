@@ -1,0 +1,19 @@
+<%= render 'shared/back_link_section'%>
+
+<section>
+  <div class="container">
+    <div class="d-flex justify-content-center" id="bookings-page">
+      <div class="support-image-box-left">
+        <%= image_tag 'booking-left.jpg', alt: 'Booking page image' %>
+      </div>
+
+      <div class="support-box-right" id="booking_form_area">
+        <%= render 'bookings/booking_form' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="success_popup_area">
+  <%= render "shared/request_success_pop_up" %>
+</div>

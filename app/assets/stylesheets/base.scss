@@ -407,6 +407,12 @@ font-style: normal;
   max-height: 110px;
 }
 
+.field-lg {
+  .card-control-width {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1920px) {
   .container {
     max-width: 84.28%;

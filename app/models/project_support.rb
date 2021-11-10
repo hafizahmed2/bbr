@@ -3,7 +3,7 @@ class ProjectSupport < ApplicationRecord
   validates :user_email, presence: true, format: {with: URI::MailTo::EMAIL_REGEXP}
   validates :location, presence: true
   validates :start_date, presence: true
-  # validates :groomer, presence: true
+  validates :groomer, presence: true
   validates :union_requirement, presence: true
   validates :project_details, presence: true
 

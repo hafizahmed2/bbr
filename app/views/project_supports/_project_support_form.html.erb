@@ -11,14 +11,10 @@
 
     <div class="field-control width-full">
       <label class="input-label">Type of Groomer</label>
-      <%= form.select :groomer, options_for_select(@resource_class.groomer_types), {include_blank: false}, multiple: true, class: 'select' %>
+      <%= form.select :groomer, options_for_select(@resource_class.groomer_types), {prompt: 'Select all that apply'}, multiple: true, class: 'select' %>
     </div>
 
-    <div class="field-control width-full">
-      <label class="input-label">Union Requirement</label>
-      <%= form.select :union_requirement, options_for_select(@resource_class.union_requirements, @resouce_object.union_requirement_before_type_cast), {prompt: 'Select one'}, class: 'select' %>
-    </div>
-
+    <%= form.bbr_select :union_requirement, 'Union Requirement', options_for_select(@resource_class.union_requirements, @resouce_object.union_requirement_before_type_cast), {prompt: 'Select one'}, class: 'select' %>
 
     <%= form.bbr_text_area :project_details, 'Project Details', class: 'textarea control-dark-border width-full', placeholder: 'Share project details', rows: '5' %>
 
