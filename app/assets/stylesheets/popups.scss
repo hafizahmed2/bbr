@@ -33,6 +33,10 @@
 
 .modal-footer {
   margin-top: 63px;
+
+  .btn {
+    margin-bottom: 17px;
+  }
 }
 
 .modal-close-icon {
@@ -51,4 +55,31 @@
 
 .modal-body-light {
   background-color: #F7F0E4;
+}
+
+@media screen and (max-width: 992px) {
+  .modal-body {
+    padding: 63px 33px 33px 33px;
+    margin: 0 40px;
+
+    .heading-1 {
+      font-size: 44px;
+    }
+
+    .heading-2 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 13px;
+      line-height: 22px;
+    }
+  }
+
+  .modal-close-icon {
+    top: 10px;
+    right: 10px;
+  }
+
+  input[type="submit"] {
+    -webkit-appearance: none;
+  }
 }

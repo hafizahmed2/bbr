@@ -34,11 +34,19 @@
           heading: 'red carpet / press booking'
       %>
 
-      <%= render 'home/partials/link_card',
-          link_path: new_question_path,
-          image: {src: 'image-card-5.jpg', alt: 'image-card-5.jpg'},
-          heading: 'Questions'
-      %>
+      <div class="image-card">
+        <%= link_to '', data: {toggle: 'modal', target: '#questions-modal' } do %>
+          <div class="image-placeholder">
+            <%= image_tag 'image-card-5.jpg', alt: 'image-card-5.jpg' %>
+          </div>
+
+          <div class="image-card-content">
+            <p class="heading heading-3 txt-white">Questions</p>
+            <p class="txt-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        <% end %>
+      </div>
+
 
       <%= render 'home/partials/link_card',
         link_path: '/',
@@ -48,3 +56,5 @@
     </div>
   </div>
 </section>
+
+<%= render "shared/have_question" %>
