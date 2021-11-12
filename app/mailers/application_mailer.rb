@@ -9,6 +9,8 @@ class ApplicationMailer < ActionMailer::Base
 
   def new_record_email(object)
     @model_object = object
-    mail(to: object.user_email, from: ENV['EMAIL_FROM'], subject: @subject)
+    send_to = ENV['EMAIL_TO'].split(',')
+
+    mail(to: send_to, from: ENV['EMAIL_FROM'], subject: @subject)
   end
 end

@@ -7,9 +7,17 @@ class ProjectSupport < ApplicationRecord
   validates :union_requirement, presence: true
   validates :project_details, presence: true
 
+  after_create :send_email_to_admin
+
   enum union_requirement: ['yes', 'no']
 
   def self.groomer_types
     ['Hair', 'Makeup', 'Hair and Makeup', 'Groomer', 'Barber', 'Nail Artist']
+  end
+
+  private
+
+  def send_email_to_admin
+    ProjectSupportMailer.new_record_email(self).deliver_now
   end
 end
