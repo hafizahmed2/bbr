@@ -1,0 +1,39 @@
+<% booking = @model_object %>
+<h3 class="heading heading-2">Red carpet / press booking</h3>
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td><%= booking.user_name %></td>
+  </tr>
+
+  <tr>
+    <td>Email</td>
+    <td><%= booking.user_email %></td>
+  </tr>
+
+  <tr>
+    <td>Person you are booking for</td>
+    <td><%= booking.booking_for %></td>
+  </tr>
+
+  <tr>
+    <td>Date</td>
+    <td><%= booking.date %></td>
+  </tr>
+
+  <tr>
+    <td>Time</td>
+    <td><%= booking.time %></td>
+  </tr>
+
+  <tr>
+    <td>Services</td>
+    <td><%= booking.services.join(', ') %></td>
+  </tr>
+
+  <tr>
+    <td>Budget</td>
+    <td><%= booking.budget %></td>
+  </tr>
+</table>
