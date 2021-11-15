@@ -17,34 +17,44 @@
   <div class="container">
     <div class="d-flex justify-content-center">
       <%= render 'home/partials/link_card',
-        link_path: '/',
+        link_path: new_experience_path,
         image: {src: 'image-card-1.jpg', alt: 'share an experience'},
         heading: 'share an experience'
       %>
 
       <%= render 'home/partials/link_card',
-        link_path: '/',
+        link_path: new_project_support_path,
         image: {src: 'image-card-2.jpg', alt: 'support for a project'},
         heading: 'support for a project'
       %>
 
       <%= render 'home/partials/link_card',
-          link_path: '/',
+          link_path: new_booking_path,
           image: {src: 'image-card-3.jpg', alt: 'Red carpet / press booking'},
           heading: 'red carpet / press booking'
       %>
 
-      <%= render 'home/partials/link_card',
-          link_path: '/',
-          image: {src: 'image-card-4.jpg', alt: 'Tips & faq'},
-          heading: 'tips & faq'
-      %>
+      <div class="image-card">
+        <%= link_to '', data: {toggle: 'modal', target: '#questions-modal' } do %>
+          <div class="image-placeholder">
+            <%= image_tag 'image-card-5.jpg', alt: 'image-card-5.jpg' %>
+          </div>
+
+          <div class="image-card-content">
+            <p class="heading heading-3 txt-white">Questions</p>
+            <p class="txt-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        <% end %>
+      </div>
+
 
       <%= render 'home/partials/link_card',
-          link_path: new_question_path,
-          image: {src: 'image-card-5.jpg', alt: 'image-card-5.jpg'},
-          heading: 'Questions'
+        link_path: '/',
+        image: {src: 'image-card-4.jpg', alt: 'Tips & faq'},
+        heading: 'tips & faq'
       %>
     </div>
   </div>
 </section>
+
+<%= render "shared/have_question" %>

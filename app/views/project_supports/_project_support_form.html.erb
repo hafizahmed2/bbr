@@ -1,0 +1,36 @@
+<%= form_with model: @resouce_object, builder: CustomFormBuilder, remote: true, local: false do |form| %>
+  <h2 class="heading heading-2">support for projects</h2>
+
+  <div class="exp-form d-flex justify-content-between">
+    <%= form.bbr_text_field :user_name, :name, class: 'text-field control-dark-border', placeholder: 'Enter your full name' %>
+
+    <%= form.bbr_email_field :user_email, :email, class: 'text-field control-dark-border', placeholder: 'Enter your email address' %>
+    <%= form.bbr_text_field :start_date, 'Project Start Date', class: 'text-field control-dark-border', placeholder: 'DD/MM/yyyy' %>
+    <%= form.bbr_text_field :location, :location, class: 'text-field control-dark-border', placeholder: 'Enter project location' %>
+
+
+    <div class="field-control width-full">
+      <label class="input-label">Type of Groomer</label>
+      <%= form.select :groomer, options_for_select(@resource_class.groomer_types, @resouce_object.groomer), {}, multiple: true, class: 'multi-select' %>
+    </div>
+
+    <%= form.bbr_select :union_requirement, 'Union Requirement', options_for_select(@resource_class.union_requirements, @resouce_object.union_requirement_before_type_cast), {prompt: 'Select one'}, class: 'select' %>
+
+    <%= form.bbr_text_area :project_details, 'Project Details', class: 'textarea control-dark-border width-full', placeholder: 'Share project details', rows: '5' %>
+
+    <%= form.bbr_submit 'Request Support', id: 'm-card-btn', class: 'btn btn-primary margin-auto', data: {disable_with: 'processing...'} %>
+  </div>
+
+  <br/>
+  <%= link_to 'Set time to discuss instead', '/', class: 'd-flex bbr-link justify-content-center txt-dark' %>
+<% end %>
+
+<script>
+  $('#project_support_start_date').flatpickr({
+    dateFormat: "d/m/Y"
+  });
+
+  $('.multi-select').multiselect({
+    placeholder: 'Select all that apply'
+  });
+</script>

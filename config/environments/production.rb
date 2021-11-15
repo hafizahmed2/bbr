@@ -3,6 +3,20 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  host = ENV['HOST']
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: host }
+  config.action_mailer.asset_host = host
+
+  config.action_mailer.smtp_settings = {
+    address: ENV['SMTP_ADDRESS'],
+    port: 587,
+    user_name: ENV['SMTP_USERNAME'],
+    password: ENV['SMTP_PASSWORD'],
+    authentication: "plain",
+    enable_starttls_auto: true
+  }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

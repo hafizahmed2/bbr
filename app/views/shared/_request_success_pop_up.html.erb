@@ -2,7 +2,7 @@
   <div class="modal-block">
     <div class="modal-body modal-body-light">
       <div class="modal-close-icon">
-        <span class="modal-close-icon">&times;</span>
+        <span class="modal-close-icon" data-modal="close">&times;</span>
       </div>
 
       <p class="heading heading-3 txt-center">
@@ -18,19 +18,9 @@
       <br />
 
       <div class="modal-footer d-flex justify-content-center">
-        <a href="#" class="btn btn-primary">Back to BBR Support</a>
+        <%= link_to 'Back to BBR Support', root_url, class: 'btn btn-primary', data: {modal: 'close'} %>
       </div>
 
     </div>
   </div>
 </div>
-
-<script>
-var modal = document.getElementById("bbr-modal");
-var span = document.getElementsByClassName("modal-close-icon")[0];
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-</script>
-

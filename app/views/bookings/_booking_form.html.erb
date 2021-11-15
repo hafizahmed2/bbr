@@ -1,0 +1,43 @@
+<%= form_with model: @resouce_object, builder: CustomFormBuilder, remote: true, local: false do |form| %>
+  <h2 class="heading heading-2">red carpet / press booking</h2>
+
+  <div class="exp-form d-flex justify-content-between">
+    <%= form.bbr_text_field :user_name, :name, class: 'text-field control-dark-border', placeholder: 'Enter your full name' %>
+
+    <%= form.bbr_email_field :user_email, :email, class: 'text-field control-dark-border', placeholder: 'Enter your email address' %>
+
+    <div class="field-lg width-full">
+      <%= form.bbr_text_field :booking_for, 'Person you are booking for', {class: 'text-field control-dark-border', placeholder: 'Enter full name of the person you booking for'}, '*This help us with the booking, talent will remain anonymous' %>
+    </div>
+
+    <%= form.bbr_text_field :date, :date, class: 'text-field control-dark-border', placeholder: 'DD/MM/YYYY' %>
+    <%= form.bbr_text_field :time, :time, class: 'text-field control-dark-border', placeholder: 'HH:MM PM' %>
+
+    <%= form.bbr_select :services, :services, options_for_select(@resource_class.service_types), {}, multiple: true, class: 'multi-select' %>
+
+    <div class="field-lg width-full">
+      <%= form.bbr_text_field :budget, :budget, class: 'text-field control-dark-border', placeholder: 'Enter your budget' %>
+    </div>
+
+    <%= form.bbr_submit 'Book Service', id: 'm-card-btn', class: 'btn btn-primary', data: {disable_with: 'processing...'} %>
+  </div>
+
+<% end %>
+
+<script>
+  $('#booking_date').flatpickr({
+    dateFormat: "d/m/Y"
+  });
+
+  $('#booking_time').flatpickr({
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
+    defaultDate: "5:00",
+    minuteIncrement: 30
+  });
+
+  $('.multi-select').multiselect({
+    placeholder: 'Select a service'
+  });
+</script>

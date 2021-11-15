@@ -1,0 +1,24 @@
+<% experience = @model_object %>
+<h3>New experience shared</h3>
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td><%= experience.user_name %></td>
+  </tr>
+
+  <tr>
+    <td>Email</td>
+    <td><%= experience.user_email %></td>
+  </tr>
+
+  <tr>
+    <td>Date of the experience</td>
+    <td><%= experience.date&.strftime("%d/%m/%Y") %></td>
+  </tr>
+
+  <tr>
+    <td>Experience</td>
+    <td><%= simple_format(experience.experience) %></td>
+  </tr>
+</table>

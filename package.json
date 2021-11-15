@@ -2,10 +2,12 @@
   "name": "bbr",
   "private": true,
   "dependencies": {
+    "@nobleclem/jquery-multiselect": "^2.4.19",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
+    "flatpickr": "^4.6.9",
     "jquery": "^3.6.0",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",

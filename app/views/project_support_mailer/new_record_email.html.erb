@@ -1,0 +1,39 @@
+<% support = @model_object %>
+<h3">New support for projects submission</h3>
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td><%= support.user_name %></td>
+  </tr>
+
+  <tr>
+    <td>Email</td>
+    <td><%= support.user_email %></td>
+  </tr>
+
+  <tr>
+    <td>Project start date</td>
+    <td><%= support.start_date&.strftime("%d/%m/%Y") %></td>
+  </tr>
+
+  <tr>
+    <td>Location</td>
+    <td><%= support.location %></td>
+  </tr>
+
+  <tr>
+    <td>Type of Groomer</td>
+    <td><%= support.groomer.join(', ') %></td>
+  </tr>
+
+  <tr>
+    <td>Union requirement</td>
+    <td><%= support.union_requirement %></td>
+  </tr>
+
+  <tr>
+    <td>Project details</td>
+    <td><%= simple_format(support.project_details) %></td>
+  </tr>
+</table>

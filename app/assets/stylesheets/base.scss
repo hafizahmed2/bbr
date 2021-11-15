@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: CenturyGothicRegular;
+  font-family: CenturyGothicRegular, Arial, Helvetica, sans-serif;
   font-size: 16px;
   background-color: #F7F0E4;
 }
@@ -15,6 +15,9 @@ body {
   width: 100%;
   padding-top: 16px;
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .container {
@@ -54,16 +57,27 @@ body {
   text-decoration: none;
   text-align: center;
   border: none;
-}
-
-.btn-primary {
-  background: #FFA37C;
   font-family: CenturyGothicRegular;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
+}
+
+.btn-primary {
+  background: #FFA37C;
+  color: #361312;
+}
+
+.btn-secondary {
+  background: #361312;
+  color: #F7F0E4;
+}
+
+.btn-outline {
+  border: 1px solid #361312;
+  background-color: transparent;
   color: #361312;
 }
 
@@ -95,6 +109,7 @@ body {
   line-height: 36px;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .heading-3 {
@@ -202,7 +217,7 @@ font-style: normal;
 
 /* Share Experience PAGE */
 
-#share-exp-page {
+#share-exp-page, #support-page, #bookings-page {
   margin-bottom: 80px;
 }
 
@@ -261,11 +276,6 @@ font-style: normal;
   margin-right: auto;
 }
 
-/* Support Page */
-
-#support-page {
-  margin-bottom: 80px;
-}
 
 .btn-back {
   margin: 31px 13px 45px 0;
@@ -298,22 +308,6 @@ font-style: normal;
   color: #361312;
 }
 
-.select {
-  width: 100%;
-  height: 54px;
-  background-color: transparent;
-  box-sizing: border-box;
-  border-radius: 15px;
-  padding: 17px 34px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 20px;
-}
-
-.select:focus {
-  outline: 0;
-}
-
 .field-control {
   margin-bottom: 19px;
 }
@@ -331,6 +325,7 @@ font-style: normal;
   background-color: transparent;
   width: 100%;
   max-width: 100%;
+  font-family: CenturyGothicRegular, Arial, Helvetica, sans-serif;
 }
 
 .text-field:focus {
@@ -345,6 +340,7 @@ font-style: normal;
   font-style: normal;
   font-weight: normal;
   line-height: 20px;
+  font-family: CenturyGothicRegular, Arial, Helvetica, sans-serif;
 }
 
 .textarea:focus {
@@ -358,7 +354,7 @@ font-style: normal;
   font-size: 16px;
   line-height: 20px;
   display: block;
-  font-family: CenturyGothicRegular;
+  font-family: CenturyGothicRegular, Arial, Helvetica, sans-serif;
 }
 
 .control-light-border {
@@ -395,6 +391,23 @@ font-style: normal;
   display: block;
 }
 
+.validation-error-msg {
+  font-size: 12px;
+  margin-left: 8px;
+  color: #FFA37C;
+  margin-top: 4px;
+}
+
+.textarea {
+  max-height: 110px;
+}
+
+.field-lg {
+  .card-control-width {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1920px) {
   .container {
     max-width: 84.28%;
@@ -426,6 +439,7 @@ font-style: normal;
       text-align: center;
       background-size: cover;
       background-image: image-url('hero-image-mobile.jpg');
+      margin-bottom: 21px;
     }
 
     #share-exp-page .share-image-box-left {
@@ -449,6 +463,7 @@ font-style: normal;
     #share-exp-page .share-red-box-right {
       max-width: 100%;
       border-radius: 0;
+      max-height: inherit;
     }
 
     /* Support page */
@@ -475,7 +490,7 @@ font-style: normal;
   }
 
   .footer-social-icons:first-child {
-    margin-left: -26px;
+    margin-left: 0px;
   }
 
   .footer-icons {
@@ -487,16 +502,17 @@ font-style: normal;
     max-width: 100%;
     order: 2;
     justify-content: center;
-  }
 
-  .footer-left-block .footer-logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 52px;
-  }
+    .footer-logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 52px;
+      margin-right: 0;
+    }
 
-  .footer-left-block .footer-copy-right {
-    margin-bottom: 52px;
+    .footer-copy-right {
+      margin-bottom: 52px;
+    }
   }
 
   .footer-middle-block {
@@ -509,6 +525,16 @@ font-style: normal;
     text-align: center;
     margin-bottom: 52px;
   }
+
+  .image-card {
+    margin: 0 0 15px 0;
+  }
+
+  .hero-image .heading-1 {
+    font-size: 28px;
+    line-height: 33.6px;
+    margin-bottom: 5px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -519,6 +545,24 @@ font-style: normal;
 
   #m-card-btn {
     width: 100%;
+  }
+
+  .input-form-group {
+    .container {
+      padding: 0;
+
+      #share-exp-page .share-red-box-right {
+        padding: 44px 15px;
+      }
+
+      .support-image-box-left {
+        padding: 0;
+      }
+
+      .support-box-right {
+        padding: 0 15px;
+      }
+    }
   }
 
 }

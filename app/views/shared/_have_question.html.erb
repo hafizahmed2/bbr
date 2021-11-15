@@ -1,0 +1,21 @@
+<div class="is-modal" id="questions-modal">
+  <div class="modal-block">
+    <div class="modal-body modal-body-light">
+      <div class="modal-close-icon">
+        <span class="modal-close-icon" data-modal="close">&times;</span>
+      </div>
+        <p class="heading heading-3 txt-center">
+        have a question?
+        </p>
+
+        <p class="txt-center">
+        You can submit a question using our form or schedule a time to speak with our team member.</p>
+
+        <div class="modal-footer d-flex justify-content-center">
+        <%= link_to 'Submit a question', new_question_path, class: 'btn btn-primary width-full', data: {modal: 'close'} %>
+
+        <%= link_to 'Set time to discuss', root_url, class: 'btn btn-outline width-full', data: {modal: 'close'} %>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+$('#experience_form_area').html('<%= j render "experiences/experience_form" %>');
+
+<% if @success %>
+  $('#success_popup_area .is-modal').show();
+<% end %>
