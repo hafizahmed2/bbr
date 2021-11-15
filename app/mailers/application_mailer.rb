@@ -9,7 +9,7 @@ class ApplicationMailer < ActionMailer::Base
 
   def new_record_email(object)
     @model_object = object
-    send_to = ENV['EMAIL_TO'].split(',')
+    send_to = Rails.env.production? ? ENV['EMAIL_TO'].split(',') : 'local@bbr.com'
 
     mail(to: send_to, from: ENV['EMAIL_FROM'], subject: @subject)
   end

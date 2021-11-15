@@ -9,6 +9,8 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 require("jquery")
+require("@nobleclem/jquery-multiselect")
+import "@nobleclem/jquery-multiselect/jquery.multiselect.css"
 
 import flatpickr from "flatpickr"
 import "flatpickr/dist/flatpickr.min.css"

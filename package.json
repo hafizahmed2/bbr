@@ -2,6 +2,7 @@
   "name": "bbr",
   "private": true,
   "dependencies": {
+    "@nobleclem/jquery-multiselect": "^2.4.19",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",

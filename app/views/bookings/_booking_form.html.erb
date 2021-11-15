@@ -13,8 +13,7 @@
     <%= form.bbr_text_field :date, :date, class: 'text-field control-dark-border', placeholder: 'DD/MM/YYYY' %>
     <%= form.bbr_text_field :time, :time, class: 'text-field control-dark-border', placeholder: 'HH:MM PM' %>
 
-    <%= form.bbr_select :services, :services, options_for_select(@resource_class.service_types), {prompt: 'Select a service'}, multiple: true, class: 'select' %>
-
+    <%= form.bbr_select :services, :services, options_for_select(@resource_class.service_types), {}, multiple: true, class: 'multi-select' %>
 
     <div class="field-lg width-full">
       <%= form.bbr_text_field :budget, :budget, class: 'text-field control-dark-border', placeholder: 'Enter your budget' %>
@@ -26,10 +25,19 @@
 <% end %>
 
 <script>
-  $('#booking_date').flatpickr();
+  $('#booking_date').flatpickr({
+    dateFormat: "d/m/Y"
+  });
+
   $('#booking_time').flatpickr({
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
+    defaultDate: "5:00",
+    minuteIncrement: 30
+  });
+
+  $('.multi-select').multiselect({
+    placeholder: 'Select a service'
   });
 </script>
