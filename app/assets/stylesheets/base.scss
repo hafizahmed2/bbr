@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: CenturyGothicRegular, Arial, Helvetica, sans-serif;
+  font-family: CenturyGothicRegular, sans-serif;
   font-size: 16px;
   background-color: #F7F0E4;
 }
@@ -82,9 +82,10 @@ body {
 }
 
 .hero-image {
-  background-image: image-url('hero-image-1.jpg');
+  background-image: image-url('hero-image.jpg');
   background-position: right top;
   background-repeat: no-repeat;
+  background-size: contain;
   background-color: #0B0205;
   padding: 122px 0 192px 0;
   margin-bottom: 65px;
@@ -325,7 +326,7 @@ font-style: normal;
   background-color: transparent;
   width: 100%;
   max-width: 100%;
-  font-family: CenturyGothicRegular, Arial, Helvetica, sans-serif;
+  font-family: CenturyGothicRegular, sans-serif;
 }
 
 .text-field:focus {
@@ -340,7 +341,7 @@ font-style: normal;
   font-style: normal;
   font-weight: normal;
   line-height: 20px;
-  font-family: CenturyGothicRegular, Arial, Helvetica, sans-serif;
+  font-family: CenturyGothicRegular, sans-serif;
 }
 
 .textarea:focus {
@@ -354,7 +355,7 @@ font-style: normal;
   font-size: 16px;
   line-height: 20px;
   display: block;
-  font-family: CenturyGothicRegular, Arial, Helvetica, sans-serif;
+  font-family: CenturyGothicRegular, sans-serif;
 }
 
 .control-light-border {
