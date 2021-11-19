@@ -57,6 +57,26 @@
   background-color: #F7F0E4;
 }
 
+.experience-modal-heading {
+  color: #361312;
+  margin-bottom: 30px;
+}
+
+.is-modal.success-request-pop-up {
+  .success-request-img {
+    max-width: 400px;
+    margin: 10px auto;
+  }
+
+  .modal-footer {
+    margin-top: 0;
+
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   .modal-body {
     padding: 63px 33px 33px 33px;

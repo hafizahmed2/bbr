@@ -5,9 +5,10 @@
     <%= form.bbr_text_field :user_name, :name, class: 'text-field control-dark-border', placeholder: 'Enter your full name' %>
 
     <%= form.bbr_email_field :user_email, :email, class: 'text-field control-dark-border', placeholder: 'Enter your email address' %>
-    <%= form.bbr_text_field :start_date, 'Project Start Date', class: 'text-field control-dark-border', placeholder: 'DD/MM/yyyy' %>
-    <%= form.bbr_text_field :location, :location, class: 'text-field control-dark-border', placeholder: 'Enter project location' %>
 
+    <%= form.bbr_text_field :start_date, 'Project Start Date', value: @resouce_object.start_date&.strftime("%m/%d/%Y"), class: 'text-field control-dark-border', placeholder: 'MM/DD/YYYY' %>
+
+    <%= form.bbr_text_field :location, :location, class: 'text-field control-dark-border', placeholder: 'Enter project location' %>
 
     <div class="field-control width-full">
       <label class="input-label">Type of Groomer</label>
@@ -27,10 +28,10 @@
 
 <script>
   $('#project_support_start_date').flatpickr({
-    dateFormat: "d/m/Y"
+    dateFormat: "m/d/Y"
   });
 
   $('.multi-select').multiselect({
-    placeholder: 'Select all that apply'
+    placeholder: 'Select all that apply',
   });
 </script>

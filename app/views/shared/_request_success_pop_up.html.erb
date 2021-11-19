@@ -1,4 +1,4 @@
-<div class="is-modal" id="bbr-modal">
+<div class="is-modal success-request-pop-up" id="bbr-modal">
   <div class="modal-block">
     <div class="modal-body modal-body-light">
       <div class="modal-close-icon">
@@ -12,10 +12,8 @@
       <p class="txt-center">A member of our team will be in touch with you shortly.</p>
 
       <div class="txt-center">
-        <%= image_tag 'success_modal_image.png', class: 'width-full', alt: 'success modal image' %>
+        <%= image_tag 'success_modal_image.png', class: 'width-full success-request-img', alt: 'success modal image' %>
       </div>
-
-      <br />
 
       <div class="modal-footer d-flex justify-content-center">
         <%= link_to 'Back to BBR Support', root_url, class: 'btn btn-primary', data: {modal: 'close'} %>

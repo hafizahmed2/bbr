@@ -1,6 +1,8 @@
 <% link_path ||= '/' %>
 <% image ||= {src: '', alt: 'image'} %>
 <% text ||= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' %>
+<% text_class ||= '' %>
+
 
 <div class="image-card">
   <%= link_to link_path do %>
@@ -10,7 +12,7 @@
 
     <div class="image-card-content">
       <p class="heading heading-3 txt-white"><%= heading %></p>
-      <p class="txt-white"><%= text %></p>
+      <p class="txt-white <%= text_class %>"><%= text %></p>
     </div>
   <% end %>
 </div>

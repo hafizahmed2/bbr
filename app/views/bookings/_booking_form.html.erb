@@ -10,8 +10,11 @@
       <%= form.bbr_text_field :booking_for, 'Person you are booking for', {class: 'text-field control-dark-border', placeholder: 'Enter full name of the person you booking for'}, '*This help us with the booking, talent will remain anonymous' %>
     </div>
 
-    <%= form.bbr_text_field :date, :date, class: 'text-field control-dark-border', placeholder: 'DD/MM/YYYY' %>
-    <%= form.bbr_text_field :time, :time, class: 'text-field control-dark-border', placeholder: 'HH:MM PM' %>
+    <%= form.bbr_text_field :date, :date, value: @resouce_object.date&.strftime("%m/%d/%Y"), class: 'text-field control-dark-border', placeholder: 'MM/DD/YYYY' %>
+
+    <div class="card-control-width">
+      <%= form.bbr_select :time, :time, options_for_select(avaiable_time_options, @resouce_object.time&.strftime("%I:%M %p")), {prompt: 'HH:MM PM'}, class: 'select' %>
+    </div>
 
     <%= form.bbr_select :services, :services, options_for_select(@resource_class.service_types), {}, multiple: true, class: 'multi-select' %>
 
@@ -26,15 +29,7 @@
 
 <script>
   $('#booking_date').flatpickr({
-    dateFormat: "d/m/Y"
-  });
-
-  $('#booking_time').flatpickr({
-    enableTime: true,
-    noCalendar: true,
-    dateFormat: "H:i",
-    defaultDate: "5:00",
-    minuteIncrement: 30
+    dateFormat: "m/d/Y"
   });
 
   $('.multi-select').multiselect({

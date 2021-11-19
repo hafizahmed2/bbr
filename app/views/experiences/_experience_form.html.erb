@@ -5,7 +5,7 @@
 
     <%= form.bbr_email_field :user_email, :email, class: 'text-field control-light-border', placeholder: 'Enter your email address' %>
 
-    <%= form.bbr_text_field :date, 'date of the experience', class: 'text-field control-light-border datepicker', placeholder: 'DD/MM/YYYY' %>
+    <%= form.bbr_text_field :date, 'date of the experience', value: @resouce_object.date&.strftime("%m/%d/%Y"), class: 'text-field control-light-border datepicker', placeholder: 'MM/DD/YYYY' %>
 
     <%= form.bbr_text_area :experience, :experience, class: 'textarea control-light-border width-full', placeholder: 'Share your experience', rows: '7' %>
 
@@ -15,6 +15,6 @@
 
 <script>
   $('#experience_date').flatpickr({
-    dateFormat: "d/m/Y"
+    dateFormat: "m/d/Y"
   });
 </script>
