@@ -13,7 +13,7 @@
     <%= form.bbr_text_field :date, :date, value: @resouce_object.date&.strftime("%m/%d/%Y"), class: 'text-field control-dark-border', placeholder: 'MM/DD/YYYY' %>
 
     <div class="card-control-width">
-      <%= form.bbr_select :time, :time, options_for_select(avaiable_time_options, @resouce_object.time&.strftime("%I:%M %p")), {prompt: 'HH:MM PM'}, class: 'select' %>
+      <%= form.bbr_select :time, :time, options_for_select(avaiable_time_options, @resouce_object.time&.strftime("%I:%M %p")), {prompt: 'HH:MM'}, class: 'select' %>
     </div>
 
     <%= form.bbr_select :services, :services, options_for_select(@resource_class.service_types), {}, multiple: true, class: 'multi-select' %>
