@@ -9,7 +9,7 @@ class ProjectSupport < ApplicationRecord
 
   after_create :send_email_to_admin
 
-  enum union_requirement: ['yes', 'no']
+  enum union_requirement: ['Yes', 'No']
 
   def self.groomer_types
     ['Hair', 'Makeup', 'Hair and Makeup', 'Groomer', 'Barber', 'Nail Artist']

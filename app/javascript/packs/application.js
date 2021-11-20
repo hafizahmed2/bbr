@@ -17,6 +17,7 @@ import "flatpickr/dist/flatpickr.min.css"
 
 import "bbr/modals"
 import "bbr/datepickers_conf"
+import "bbr/custom-select-menu.jquery"
 
 Rails.start()
 Turbolinks.start()
