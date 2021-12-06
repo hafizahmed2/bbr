@@ -60,6 +60,7 @@
       margin: 1px 0;
       border: 1px dotted transparent;
       font-family: CenturyGothicRegular, sans-serif;
+      font-size: 13.33px;
 
       &:before {
         content: "";
@@ -99,7 +100,7 @@
       li {
         margin-left: 0px;
         font-family: CenturyGothicRegular, sans-serif;
-        font-size: 13.33px;
+        font-size: 13.33px !important;
 
         &.selected {
           label {
