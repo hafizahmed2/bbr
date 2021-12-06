@@ -14,6 +14,10 @@
   </head>
 
   <body>
+    <% if notice.present? || alert.present? %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <% end %>
     <%= render 'layouts/partials/nav_bar' %>
     <%= yield %>
     <%= render 'layouts/partials/footer' %>
