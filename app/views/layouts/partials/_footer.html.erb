@@ -19,10 +19,15 @@
       <div class="footer-right-block">
         <div class="footer-icons d-flex align-item-center">
           <div class="footer-social-icons">
-            <%= image_tag 'icon-insta.svg', alt: 'insta image' %>
+            <%= link_to 'https://www.instagram.com/blackbeautyroster/', target: '_blank' do %>
+              <%= image_tag 'icon-insta.svg', alt: 'insta image' %>
+            <% end %>
           </div>
+
           <div class="footer-social-icons">
-            <%= image_tag 'icon-youtube.svg', alt: 'youtube image' %>
+            <%= link_to 'https://www.youtube.com/results?search_query=black+beauty+roster', target: '_blank' do %>
+              <%= image_tag 'icon-youtube.svg', alt: 'youtube image' %>
+            <% end %>
           </div>
         </div>
       </div>
