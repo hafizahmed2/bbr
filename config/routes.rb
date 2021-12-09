@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   resources :bookings, only: [:new, :create]
   resources :faqs, only: [:index]
 
+  get :privacy_policy, to: 'pages#privacy_policy'
+  get :terms, to: 'pages#terms'
+
   root to: 'home#index'
 end
