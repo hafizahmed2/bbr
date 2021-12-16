@@ -6,6 +6,7 @@ class Booking < ApplicationRecord
   validates :time, presence: true
   validates :services, presence: true
   validates :budget, presence: true
+  validates :location, presence: true
 
   after_create :send_email_to_admin
 

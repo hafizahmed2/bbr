@@ -16,6 +16,10 @@
       <%= form.bbr_select :time, :time, options_for_select(avaiable_time_options, @resouce_object.time&.strftime("%I:%M %p")), {prompt: 'HH:MM'}, class: 'select' %>
     </div>
 
+    <div class="field-lg width-full">
+      <%= form.bbr_text_field :location, :location, class: 'text-field control-dark-border', placeholder: 'Enter location' %>
+    </div>
+
     <%= form.bbr_select :services, :services, options_for_select(@resource_class.service_types), {}, multiple: true, class: 'multi-select' %>
 
     <div class="field-lg width-full">
